@@ -2,9 +2,11 @@ import os
 
 # 将basepath路径下的txt文本后缀改为rgb
 basepath = r"D:\tmp"
+res_suffix = ".txt"
+dst_suffix = ".rgb"
 for file in os.listdir(basepath):
     head, tail = os.path.splitext(file)
-    if tail == ".txt":
-        new_file = head + ".rgb"
+    if tail == res_suffix:
+        new_file = head + dst_suffix
         os.rename(os.path.join(basepath, file),
                   os.path.join(basepath, new_file))
