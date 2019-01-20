@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# 2018/09/05
-# （已失效）淘宝秒杀脚本，扫码登录版
+# 2019/1/20
+# 淘宝秒杀脚本，扫码登录版
 from selenium import webdriver
 import datetime
 import time
