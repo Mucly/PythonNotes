@@ -1,4 +1,4 @@
-# Selenium 必要环境
+# Selenium 安装环境搭建
 * python
 * pip install selenium
 * chromedriver.exe&nbsp;&nbsp;&nbsp;放至在python安装目录下 (https://npm.taobao.org/mirrors/chromedriver)
