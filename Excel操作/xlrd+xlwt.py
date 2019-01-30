@@ -1,10 +1,11 @@
-# -*- coding:utf-8 -*-
-# install : cmd >>> pip install xlrd && pip install xlwt
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 # 为简便代码，实例的方法以层级缩进的方式展示
+# 不支持：xlxs、vba
 import xlrd
 import xlwt
 
-# xls读取操作
+#******************** xls读取操作 ********************#
 # PART 1 打开目标xls文件
 xlrd.open_workbook(xls_path)  # 返回一个workbook实例，代表载入的xls
 # PART 2 workbook实例方法，打开该xls的目标sheet后返回一个sheet实例
@@ -29,7 +30,7 @@ xlrd.open_workbook(xls_path)  # 返回一个workbook实例，代表载入的xls
         .cell_type(rowx, colx)  # 返回单元格中的数据类型
         .cell_value(rowx, colx)  # 返回单元格中的数据
 
-# xls写入操作
+#******************** xls写入操作 ********************#
 # PART 1 新建一个xls，编码为utf-8后返回一个workbook实例
 xlwt.Workbook(encoding='utf-8')
 # PART2 workbook实例方法：创建一个sheet，名字自定
