@@ -3,7 +3,6 @@
 # 2019/1/20
 
 import os
-import fnmatch
 
 
 def changeSuffix(path, res_suffix, dst_suffix):
