@@ -15,15 +15,15 @@
     # S2 DOM操作
     chrome_driver.
             # 定位一个元素
-                .find_element(type, "content") #
+                .find_element(ByType, "content")            # 原始方式 eg. find_element(By.ID, "name")
                 .find_element_by_name("name")
                 .find_element_by_id("id")
                 .find_element_by_class_name("class")
-                .find_element_by_tag_name("tag")  # 一般不用，因为重复太多
+                .find_element_by_tag_name("tag")            # 一般不用，因为重复太多
                 .find_element_by_link_text("text")
-                .find_element_by_partial_link_text("text") # 部分文字匹配
+                .find_element_by_partial_link_text("text")  # 部分文字匹配
                 .find_element_by_css_selector()
-                .find_element_by_xpath()  # 万能  eg. "//div[@id='hd']/form/span/input" 也可以通过@name，@class等来查，这里的/代表路径
+                .find_element_by_xpath()                    # xpath方式  eg. "//div[@id='hd']/form/span/input" 也可以通过@name，@class等来查，这里的/代表路径
             # 定位一组元素
                 ''' element加个s即可
                     例： .find_elements_by_name()
