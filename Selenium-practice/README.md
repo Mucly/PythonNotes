@@ -7,7 +7,7 @@
     from selenium import webdriver
     from selenium.webdriver.common.by import By
 
-    chrome_driver = webdriver.Chrome([path]) # path默认为环境变量（py代码本地执行）/ 当前py代码路径（打包为exe后）
+    chrome_driver = webdriver.Chrome() # path形参缺省为环境变量 / 打包为exe后缺省为exe当前目录
 
     # S1 页面设置
     chrome_driver.maximize_window() # 最大化chrome窗口
