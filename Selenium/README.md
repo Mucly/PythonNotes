@@ -4,7 +4,7 @@
 - <a href="https://npm.taobao.org/mirrors/chromedriver/"> chromedriver.exe</a> 点击下载合适的版本后，放至指定目录下，用于驱动chrome
 - <a href="https://selenium-python.readthedocs.io/api.html">selenium官方API</a>
 - 推荐书籍:
- 1. selenium2 python自动化测试
+ 1. selenium2 python自动化测试 - 虫师
 
 # 简易代码demo
     ''' S1 driver > S2 WebElement '''
@@ -12,7 +12,7 @@
 
     driver = webdriver.Chrome() # default $PATH  / exe_default: current path
 
-    # S1 driver方法
+    # S1 driver窗口方法
         .maximize_window()  # 最大化chrome窗口
         .set_window_size(w, h)
         .refresh()          # 刷新页面
@@ -20,24 +20,24 @@
         .forward()          # 前进
         .execute_script(js, *args) # eg. js = "window.scrollTo(x, y) // 滚动条滚动"
 
-    # S1 driver属性
+    # S1 driver窗口属性
         .title              # 返回页面标题
         .current_url        # 获取当前页面的URL
         .page_source        # 返回页面源码
-    # S1 driver页面元素接口
-    # 焦点跳转 https://blog.csdn.net/huilan_same/article/details/52200586
-        .switch_to.
-                    .frame(ref) # ref可以是id、name、index和WebElement，ref无需加额外标识符
-                    .alert # 触发页面alert后，使用此方法会生成一个Alert类对象; 也可通过构造Alert类，eg. Alert(driver)
-                        .accept()                   # 确认
-                        .dismiss()                  # 取消
-                        .authenticate(usrn, pwd)    # 身份验证
-                        .send_keys(keysToSend)      # 发送文本
-                        .text                       # 返回alert文本内容
-                        .default_content()          # 切回主文档
-                        .parent_frame()             # 从子frame切到父frame
 
-    # S1 driver元素定位，并返回一个WebElement
+    # S1 driver焦点方法 https://blog.csdn.net/huilan_same/article/details/52200586
+        .switch_to.
+                .frame(ref) # ref可以是id、name、index和WebElement，ref无需加额外标识符
+                .alert # 触发页面alert后，使用此方法会生成一个Alert类对象; 也可通过构造Alert类，eg. Alert(driver)
+                    .accept()                   # 确认
+                    .dismiss()                  # 取消
+                    .authenticate(usrn, pwd)    # 身份验证
+                    .send_keys(keysToSend)      # 发送文本
+                    .text                       # 返回alert文本内容
+                    .default_content()          # 切回主文档
+                    .parent_frame()             # 从子frame切到父frame
+
+    # S1 driver页面元素定位方法，并返回一个WebElement
     from selenium.webdriver.common.by import By
         .find_element(By .ID / .NAME / .CLASS_NAME / .TAG_NAME / .LINK_TEXT / # 万能方式 eg. find_element(By.ID, id)
             .PARTIAL_LINK_TEXT / .XPATH / .CSS_SELECTOR, content)
@@ -53,7 +53,7 @@
     # S1 driver元素定位一组元素，并返回一个WebElement数组
     ''' 上面的element加个s即可 '''
 
-    # S2 WebElement 接口 常用
+    # S2 WebElement操作方法
         from selenium.webdriver.common.keys import Keys
         .click() # 模拟鼠标点击
         .double_click()
@@ -61,7 +61,7 @@
         .send_keys(k1[, k2]) # 送键值，文本范例：u"中文" ； 按键范例：Keys.RETURN
         .submit()
 
-    # S2 WebElement 接口 获取值
+    # S2 WebElement属性/方法
         .size
         .text
         .tag_name
