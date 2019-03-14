@@ -12,13 +12,18 @@
 
     driver = webdriver.Chrome() # default $PATH  / exe_default: current path
 
-    # S1 driver页面元素接口
-        .maximize_window() # 最大化chrome窗口
-        .title             # 返回页面标题
-        .current_url       # 获取当前页面的URL
-        .page_source       # 返回页面源码
+    # S1 driver方法
+        .maximize_window()  # 最大化chrome窗口
+        .set_window_size(w, h)
+        .refresh()          # 刷新页面
+        .back()             # 后退
+        .forward()          # 前进
         .execute_script(js, *args) # eg. js = "window.scrollTo(x, y) // 滚动条滚动"
 
+    # S1 driver属性
+        .title              # 返回页面标题
+        .current_url        # 获取当前页面的URL
+        .page_source        # 返回页面源码
     # S1 driver页面元素接口
     # 焦点跳转 https://blog.csdn.net/huilan_same/article/details/52200586
         .switch_to.
@@ -29,8 +34,8 @@
                         .authenticate(usrn, pwd)    # 身份验证
                         .send_keys(keysToSend)      # 发送文本
                         .text                       # 返回alert文本内容
-                        .default_content() # 切回主文档
-                        .parent_frame() # 从子frame切到父frame
+                        .default_content()          # 切回主文档
+                        .parent_frame()             # 从子frame切到父frame
 
     # S1 driver元素定位，并返回一个WebElement
     from selenium.webdriver.common.by import By
