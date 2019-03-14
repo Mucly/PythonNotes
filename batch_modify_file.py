@@ -7,7 +7,7 @@ import os
 
 def changeSuffix(path, res_suffix, dst_suffix):
     '''
-        将basepath路径下，所有后缀为res_suffix的文件，后缀改为dst_suffix
+        将path路径下，所有后缀为res_suffix的文件，后缀改为dst_suffix
         后缀即文件的拓展名，即文件类型
     '''
     for file in os.listdir(path):
