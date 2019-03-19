@@ -3,7 +3,7 @@
 - 准备1：pip install xlrd 
 - 准备2：pip install xlwt
 
-##一、 xls读取操作
+## 一、 xls读取操作
     import xlrd # xls read
     # PART 1 打开目标xls文件
     xlrd.open_workbook(xls_path)  # 返回一个workbook实例，代表载入的xls
@@ -31,7 +31,7 @@
             .cell_type(rowx, colx)  # 返回单元格中的数据类型
             .cell_value(rowx, colx)  # 返回单元格中的数据
 
-##二、 xls写入操作
+## 二、 xls写入操作
     import xlwt # xls write
     # PART 1 新建一个xls，编码为utf-8后返回一个workbook实例
     xlwt.Workbook(encoding='utf-8')
