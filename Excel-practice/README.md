@@ -35,17 +35,17 @@ xlrd.open_workbook(xls_path)  # 返回一个workbook实例，代表载入的xls
 ```
 ```python
 ## 二、 xls写入操作
-    import xlwt # xls write
-    
-    # PART 1 新建一个xls，编码为utf-8后返回一个workbook实例
-    xlwt.Workbook(encoding='utf-8')
+import xlwt # xls write
 
-    # PART2 workbook实例方法：创建一个sheet，名字自定
-        .add_sheet('sheet_name')  # create a new sheet
+# PART 1 新建一个xls，编码为utf-8后返回一个workbook实例
+xlwt.Workbook(encoding='utf-8')
 
-    # PART3 sheet实例方法：按行号和列号，写入数据
-                                .write(rowx, colx, label=value)  # 行、列、值
+# PART2 workbook实例方法：创建一个sheet，名字自定
+    .add_sheet('sheet_name')  # create a new sheet
 
-    # PART4 workbook实例方法：保存
-                                .save('xls_filename.xls')
+# PART3 sheet实例方法：按行号和列号，写入数据
+                            .write(rowx, colx, label=value)  # 行、列、值
+
+# PART4 workbook实例方法：保存
+                            .save('xls_filename.xls')
 ```
