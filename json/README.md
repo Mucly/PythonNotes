@@ -1,4 +1,5 @@
 # json库的使用
+```python
     import json
     
     # json对象
@@ -27,3 +28,4 @@
     with open('j.json') as f:
       a = json.load(f)
       print(a)
+```
