@@ -6,7 +6,7 @@
 - 推荐书籍:
  1. selenium2 python自动化测试 - 虫师
 
-# 简易代码demo
+# DEMO
 ```python
 ''' S1 driver > S2 WebElement '''
 from selenium import webdriver
