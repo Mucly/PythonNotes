@@ -5,9 +5,11 @@
 ## encode 编码
 ```python
 # unicode_obj.encode(code) -> bytes
+
 str1 = "好".encode('gbk') # 将unicode对象字符串"好"，以gbk编码进行编码
 
 ## decode 解码
-    # bytes_obj.decode(code) -> unicode_obj
-    str2 = str1.decode('gbk') # 以gbk编码规则对str1进行解码，以获取unicode对象
+# bytes_obj.decode(code) -> unicode_obj
+
+str2 = str1.decode('gbk') # 以gbk编码规则对str1进行解码，以获取unicode对象
 ```
