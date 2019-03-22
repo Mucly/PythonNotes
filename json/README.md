@@ -2,7 +2,7 @@
 ```python
 import json
 
-# json对象 / data.json文件内容
+# json对象 / data.json文件内容（去掉变量名和等号）
 j_data = {
   "results": [ 
       {
@@ -18,6 +18,7 @@ j_data = {
       }]
 }
 
+# 内容是json格式的字符串
 j_str = '''{"results": [{"location": {"id": "WX4FBXXFKE4F", "name": "\u5317\u4eac", "country": "CN", "path": "\u5317\u4eac,\u5317\u4eac", "timezone": "Asia/Shanghai", "timezone_offset": "+08:00"}}]}'''
 ```
 
