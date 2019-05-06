@@ -1,4 +1,4 @@
-# 常用库
+# 常用库示例说明
 
 ## - urllib.request
 ### 范例
@@ -7,7 +7,9 @@
     url = 'http://zt.zjzs.net/xk2020/allcollege.html'
 
     # 将html转化为unicode，为防中文乱码
-    html = urlopen(url).read().decode('utf-8') # html == url的html，
+    html1 = urlopen(url).read().decode('utf-8') # html == url的html
+    html2 = requests.get(MAIN_URL).content # bytes类型的html
+    html2 = requests.get(MAIN_URL).text # 编码不完全准确
 ```
 
 ## -requests库 (pip3 install requests)
