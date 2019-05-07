@@ -20,9 +20,9 @@ ul_elements = soup.find_all("ul", {"class": "img_list"})
 
 # PART 2 找到所有ul元素下的img元素 -> 获取img元素 src节点内容（图片url）便于后续下载
 for ul in ul_elements:
-    img_elements = ul.find_all("img")
-    for img_element in img_elements:
-        img_url = img_element["src"]
+    img_els = ul.find_all("img")
+    for img_el in img_els:
+        img_url = img_el["src"]
         img_name = img_url.split("/")[-1]
         img_path = f"./tmp/{img_name}"
 
