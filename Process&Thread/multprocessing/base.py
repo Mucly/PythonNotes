@@ -1,4 +1,5 @@
-from multiprocessing import Process, Pool   # 创建多线程，适合 计算（CPU）密集型 场合, 切换耗时
+# 多线程，适合 计算（CPU）密集型 场合, 切换耗时
+from multiprocessing import Process, Pool
 import os
 import time
 import random
@@ -13,7 +14,7 @@ def long_time_task(name):
 
 
 def print_msg(i):
-    print(f"子进程{i}")
+    print(f"Process{i} End in {time.time()}")
 
 if __name__ == '__main__':
     # --- Note 1 子进程的基本使用
@@ -22,7 +23,7 @@ if __name__ == '__main__':
     p1.join()  # 连接: 等待p1子进程结束后再往下执行，通常用于子进程间的同步
 
     # --- Note2 子进程池（用于开启大量子进程）
-    CORE_CNT = 6
+    CORE_CNT = 4
     procs_pool = Pool(CORE_CNT)  # 形参缺省为本机cpu核心数
     for i in range(CORE_CNT):
         procs_pool.apply_async(print_msg, (i,))
