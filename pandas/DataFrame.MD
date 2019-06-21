@@ -34,6 +34,6 @@
 
 # drop操作
 ```python
-    df.drop([label], axis=0, inplace=False) # 按label drop 行/列，axis(0-默认行 1-列)，inplace表示在源数据上进行操作
+    df.drop(labels, axis=0, inplace=False) # 按labels(列表) drop目标行/列，axis(0-默认行 1-列)，inplace表示在源数据上进行操作
     df.dropna(axis=0, how='any', inplace=True)  # 剔除有""的数据行
 ```
