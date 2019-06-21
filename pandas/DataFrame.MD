@@ -1,11 +1,11 @@
-# 介绍  
+## 介绍  
    + 类二维数组结构  
    + 可看做是Python版的excel表格（行、列）  
 
 ```python
     df = pandas.DataFrame(data, index, columns, dtype, copy) # 创建一个dataframe实例  
 ```
-# 索引方式 
+## 索引方式 
 1. 直接索引（范围）  
 ```python
     df[col_lable] # 列标签，可接受一个数组 eg. df[ ['A','B','C'] ] => 返回ABC三列的dataframe实例
@@ -32,7 +32,7 @@
     df.iat[rowx, colx] # eg. df.iat[0, 0]
 ```
 
-# drop操作
+## drop操作
 ```python
     df.drop(labels, axis=0, inplace=False) # 按labels(列表) drop目标行/列，axis(0-默认行 1-列)，inplace表示在源数据上进行操作
     df.dropna(axis=0, how='any', inplace=True)  # 剔除有""的数据行
