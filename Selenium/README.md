@@ -10,6 +10,12 @@
 ```python
 ''' S1 driver > S2 WebElement '''
 from selenium import webdriver
+from selenium.webdriver import ChromeOptions
+
+# 防浏览器前端语言通过检测window.navigator.webdriver的值，从而被封
+option = ChromeOptions()
+option.add_experimental_option('excludeSwitches', ['enable-automation'])
+driver = webdriver.Chrome(options=option)
 
 # executable_path default ：$PATH  / Chrome x86 = chrome程序所在文件夹
 driver = webdriver.Chrome(executable_path="./Chrome x86/chromedriver.exe")
