@@ -11,6 +11,7 @@
 ''' S1 driver > S2 WebElement '''
 from selenium import webdriver
 
+# chrome_path未加入环境变量时，若提示cannot find binary file，则加入executable_path参数，例：="./Chrome x86/chromedriver.exe"
 driver = webdriver.Chrome() # default $PATH  / exe_default: current path
 
 # S1 driver窗口方法
