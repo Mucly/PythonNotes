@@ -38,3 +38,11 @@ driver = webdriver.Chrome(executable_path="./Chrome x86/chromedriver.exe")
     .switch_to.
             .frame(ref) # ref可以是id、name、index和WebElement，ref无需加额外标识符
             .alert # 触发页面alert后，
+
+# 常用的启动参数 option.add_argument(xxx)
+	'--headless', # 隐藏chrome界面
+	'blink-settings=imagesEnabled=false', # 不加载图片, 提升速度
+	'--no-sandbox', # 停用沙盘
+	'--mute-audio', # 关闭声音
+	'--no-first-run', # 关闭首次检查
+	'--disable-speech-input', # 停用语言输入
