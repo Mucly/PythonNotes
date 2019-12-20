@@ -21,6 +21,7 @@ driver = webdriver.Chrome() # default $PATH  / exe_default: current path
     .back()             # 后退
     .forward()          # 前进
     .execute_script(js, *args) # eg. js = "window.scrollTo(w, h) // 滚动条滚动"
+    .quit() 退出
 
 # S1 driver窗口属性
     .title              # 返回页面标题
