@@ -12,7 +12,8 @@
     html2 = requests.get(MAIN_URL).text # 编码不完全准确
 ```
 
-## -requests库 (pip3 install requests)
+## -requests库 (pip3 install requests) 
+### 只能抓取静态网页
 - get请求 - 百度搜索
 ```python
     url = "http://www.baidu.com/s"
@@ -49,6 +50,14 @@
     req = requests.get(IMAGE_URL)
     with open('.image2.png', 'wb') as f:
         f.write(req.content)
+```
+
+- 其他范例
+```python
+headers = {
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 Edg/86.0.622.63"
+}
+res = requests.get(main_url, headers = headers)
 ```
 
 ## - bs4  (pip3 install beautifulsoup4, pip3 install lxml)

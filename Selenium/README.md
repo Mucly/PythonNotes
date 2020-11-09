@@ -28,7 +28,18 @@ driver = webdriver.Chrome(executable_path="./Chrome x86/chromedriver.exe")
     .forward()          # 前进
     .execute_script(js, *args) # eg. js = "window.scrollTo(w, h) // 滚动条滚动"
     .quit() 退出
+    .get(url)
 
+# S1 driver查找
+    .find_element_by_  ... ()
+                        id  name  class_name  tag_name  link_text  
+                        partial_link_text  xpath  css_selector
+
+# S2 网页元素方法
+                        .txt
+                        .send_keys(data)
+                        .click()
+                        .get_attribute("属性名")
 # S1 driver窗口属性
     .title              # 返回页面标题
     .current_url        # 获取当前页面的URL
@@ -38,6 +49,8 @@ driver = webdriver.Chrome(executable_path="./Chrome x86/chromedriver.exe")
     .switch_to.
             .frame(ref) # ref可以是id、name、index和WebElement，ref无需加额外标识符
             .alert # 触发页面alert后，
+
+
 
 # 常用的启动参数 option.add_argument(xxx)
 	'--headless', # 隐藏chrome界面
